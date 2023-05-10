@@ -1,6 +1,7 @@
 let btn = document.getElementById('btn')
 let values = document.getElementById('values')
 let getUri = document.getElementById('uri')
+let reqholder = document.getElementById('reqholder')
 
 btn.addEventListener('click', ()=>{
     fetch(getUri.value, {
@@ -12,18 +13,17 @@ btn.addEventListener('click', ()=>{
     })
     .then(response => {
         if (response.ok) {
-        return response.text();
+            return response.text()
         } else {
-        throw new Error('Yanıt uygun değil.');
+            reqholder.innerHTML = `<h3>Yanıt uygun değil.</h3>`;
         }
     })
     .then(data => {
-        console.log(data);
+        reqholder.innerHTML = `<h3>data: ${data}</h3>`;
     })
     .catch(error => {
-        console.error('Hata: ', error);
+        reqholder.innerHTML = `<h3>${error}</h3>`;
     });
-
 
 })
 
