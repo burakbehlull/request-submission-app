@@ -1,9 +1,9 @@
 let btn = document.getElementById('btn')
 let values = document.getElementById('values')
-let getUri = ""
+let getUri = document.getElementById('uri')
 
 btn.addEventListener('click', ()=>{
-    fetch(getUri, {
+    fetch(getUri.value, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
