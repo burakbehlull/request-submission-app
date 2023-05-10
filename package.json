@@ -1,0 +1,24 @@
+{
+  "name": "request-submission-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "electron": "^4.2.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iambuvak/request-submission-app.git"
+  },
+  "keywords": [],
+  "author": "Burak A. <burakyabgu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iambuvak/request-submission-app/issues"
+  },
+  "homepage": "https://github.com/iambuvak/request-submission-app#readme"
+}
