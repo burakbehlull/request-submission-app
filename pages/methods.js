@@ -41,6 +41,52 @@ function GET(uri){
         })
 }
 
+function PUT(uri, values){
+    fetch(uri, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(JSON.parse(values))
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text()
+            } else {
+                reqholder.innerHTML = `<h3>Yanıt uygun değil.</h3>`;
+            }
+        })
+        .then(data => {
+            reqholder.innerHTML = `<h3>data: ${data}</h3>`;
+        })
+        .catch(error => {
+            reqholder.innerHTML = `<h3>${error}</h3>`;
+        })
+}
+
+function DELETE(uri, values){
+    fetch(uri, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(JSON.parse(values))
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text()
+            } else {
+                reqholder.innerHTML = `<h3>Yanıt uygun değil.</h3>`;
+            }
+        })
+        .then(data => {
+            reqholder.innerHTML = `<h3>data: ${data}</h3>`;
+        })
+        .catch(error => {
+            reqholder.innerHTML = `<h3>${error}</h3>`;
+        })
+}
+
 module.exports = {
-    POST, GET
+    POST, GET, PUT, DELETE
 }
