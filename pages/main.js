@@ -1,29 +1,27 @@
 let btn = document.getElementById('btn')
-let values = document.getElementById('values')
 let getUri = document.getElementById('uri')
-let reqholder = document.getElementById('reqholder')
+let values = document.getElementById('values')
+const {POST, GET} = require('./methods')
+let choose = document.getElementById('methods')
 
 btn.addEventListener('click', ()=>{
-    fetch(getUri.value, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(JSON.parse(values.value))
-    })
-    .then(response => {
-        if (response.ok) {
-            return response.text()
-        } else {
-            reqholder.innerHTML = `<h3>Yanıt uygun değil.</h3>`;
-        }
-    })
-    .then(data => {
-        reqholder.innerHTML = `<h3>data: ${data}</h3>`;
-    })
-    .catch(error => {
-        reqholder.innerHTML = `<h3>${error}</h3>`;
-    });
+    console.log("choose", choose.value)
+    switch(choose.value) {
+        case "POST":
+            POST(getUri.value, values.value)
+            break;
+        case "GET":
+            GET(getUri.value)
+            break;
+        case "DELETE":
+            console.log('DELETE METHOD')
+            break;
+        case "PUT":
+            console.log('PUT METHOD')
+            break;
+        default:
+          console.log(choose.value)
+      }
 
 })
 
