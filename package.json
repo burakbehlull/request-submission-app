@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "electron": "^4.2.12"
+    "electron": "^4.2.12",
+    "sass": "^1.70.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "dev": "electron ."
+    "dev": "electron .",
+    "sass": "sass --watch style.scss:pages/style.css"
   },
   "repository": {
     "type": "git",

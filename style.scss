@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+h1 {
+    text-align: center;
+    margin-top: max(.4rem);
+}
+
+section {
+    padding: 5em;
+    margin-top: .5rem;
+    width: max(90vw);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    border: 1px solid black;
+    border-radius: 5px 2px;
+}
+
+input, textarea, select {
+    font-size: max(5vh);
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #1d1b1b;
+    border-radius: 5px 2px;
+}
+#reqholder {
+    width: max(40vw);
+    height: max(40vh);
+    padding: 7px;
+    border: 1px solid black;
+    word-wrap: break-word;
+}
+
+button {
+    border: 1px solid black;
+    padding: 15px 20px;
+    border-radius: 7px 10px;
+    background-color: white;
+    margin: 10px;
+
+}
+@media screen and (max-width: 455px) {
+    section {
+        padding: .3em;
+    }
+}

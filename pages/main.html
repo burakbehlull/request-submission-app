@@ -5,23 +5,40 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Request Submission App</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Request Submission App</h1>
-        <input type="text" id="uri">
-        <textarea row="6" cols="12" id="values"></textarea>
-        <button type="submit" id="btn">Gönder</button>
+        
+        <section>
+            <div>
+                <label for="uri">URL: </label>
+                <input type="text" id="uri">
+            </div>
 
-        <label for="methods">Method: </label>
-        <select id="methods">
-            <option value="GET">GET</option>
-            <option value="POST">POST</option>
-            <option value="PUT">PUT</option>
-            <option value="DELETE">DELETE</option>
-        </select>
-          
+            <div>
+                <label for="values">JSON: </label>
+                <textarea row="14" cols="20" id="values"></textarea>
+            </div>
 
-        <div id="reqholder"></div>
+            <div>
+                <label for="methods">Method: </label>
+                <select id="methods">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELETE">DELETE</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit" id="btn">Gönder</button>
+            </div>
+            
+
+            <p id="reqholder"></p>
+        </section>
+
         <script src="main.js"></script>
     </body>
 </html>
